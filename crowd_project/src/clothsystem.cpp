@@ -17,6 +17,8 @@ const float restStruct = diff;
 const float restShear = sqrt(diff*diff*2);
 const float restFlex = diff * 2;
 
+const float restPersonal = 0.6;
+
 ClothSystem::ClothSystem()
 {
     // TODO 5. Initialize m_vVecState with cloth particles. 
@@ -27,7 +29,7 @@ ClothSystem::ClothSystem()
 	for (int i = 0; i < H; i++) {
 		for (int j = 0; j < W; j++) {
 			m_vVecState.push_back(initialPosition + j * Xincrement + i * Ydecrement ); //position decreases every timestep
-			m_vVecState.push_back(Vector3f{ 0.0, 0.0, 0.0 }); // velocity = 0
+			m_vVecState.push_back(Vector3f{ 0.0, 1.0, 0.0 }); // velocity = 0
 		}
 	}
 }
@@ -52,6 +54,17 @@ Vector3f getSpringForceFlex(Vector3f start, Vector3f end) {
 	return force;
 }
 
+Vector3f getPersonalSpaceForce(Vector3f boid, Vector3f other) { //find force acting on boid from other
+	Vector3f d = boid - other;
+	Vector3f force = { 0,0,0 };
+	if (d.abs() < restPersonal) {
+		force = -1 * (d.abs()-restPersonal)*d/ d.abs();
+
+	}
+	return force;
+
+}
+
 std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 {
     //std::vector<Vector3f> f(state.size());
@@ -66,12 +79,24 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 	for (int i = 0; i < H; i++) {
 		for (int j = 0; j < W*2; j+=2) {
 			Vector3f totalF = { 0.0, 0.0, 0.0 };
-			if (t != 0 && t != W*2 - 2) {
-				totalF += { 0, -g, 0 }; //gravity
-				totalF += -1 * drag*state[t + 1]; //drag
+			//totalF += {0, g, 0};
+			//totalF += 1 * drag*state[t + 1]; //drag
+
+			float tt = 0;
+			for (int ii = 0; ii < H; ii++) {
+				for (int jj = 0; jj < W * 2; jj += 2) {
+					if (t != tt) {
+						totalF += getPersonalSpaceForce(state[t], state[tt]);
+					}
+					tt += 2;
+				}
+			}
+			//if (t != 0 && t != W*2 - 2) {
+				//totalF += { 0, -g, 0 }; //gravity
+				//totalF += -1 * drag*state[t + 1]; //drag
 
 				///STRUCTURAL FORCES////
-				if (i != 0) { //if not at top edge
+				/*if (i != 0) { //if not at top edge
 					totalF += getSpringForceStruct(state[t], state[t-2*W]); //get spring 1 above
 				}
 				if (i != H - 1) { //if not at bottom edge
@@ -121,9 +146,10 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 				if (j / 2 <= W - 3) {
 					totalF += getSpringForceFlex(state[t], state[t + 2]); // get 2 right spring
 				}
+				*/
 				// FLEX SPRINGS END
 
-			}
+			//}
 
 			f.push_back(state[t + 1]); //velocity
 			f.push_back(totalF / mass); //acceleration

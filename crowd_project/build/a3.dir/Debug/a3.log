@@ -1,2 +1,15 @@
-﻿  main.cpp
+﻿  clothsystem.cpp
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(20): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(89): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(154): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(196): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(204): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(205): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(209): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(210): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(215): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(216): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(222): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
+C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\src\clothsystem.cpp(223): warning C4244: 'argument': conversion from 'float' to 'const unsigned int', possible loss of data
   a3.vcxproj -> C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\Debug\a3.exe
