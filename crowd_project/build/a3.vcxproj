@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1A288609-4382-306F-A078-490EDDAD2159}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>Win32</Platform>
+    <ProjectName>a3</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">a3.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">a3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">a3.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">a3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">a3.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">a3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">a3.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">a3</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;GLEW_STATIC;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GLEW_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;3rd_party\glfw\src\Debug\glfw3.lib;vecmath\Debug\vecmath.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/Debug/a3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/Debug/a3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;3rd_party\glfw\src\Release\glfw3.lib;vecmath\Release\vecmath.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/Release/a3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/Release/a3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;3rd_party\glfw\src\MinSizeRel\glfw3.lib;vecmath\MinSizeRel\vecmath.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/MinSizeRel/a3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/MinSizeRel/a3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glfw\include;C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;3rd_party\glfw\src\RelWithDebInfo\glfw3.lib;vecmath\RelWithDebInfo\vecmath.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:X86</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/RelWithDebInfo/a3.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/Administrator/Documents/6.837/assn3/starter3/build/RelWithDebInfo/a3.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.c;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.cxx;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.c;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.cxx;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.c;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.cxx;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/CMakeLists.txt;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCCompilerABI.c;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXCompilerABI.cpp;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCXXInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCommonLanguageInclude.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeCompilerIdDetection.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompileFeatures.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerABI.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineCompilerId.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeDetermineSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeFindBinUtils.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeGenericSystem.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeInitializeConfigs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeLanguageInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitIncludeInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeParseImplicitLinkInfo.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCCompiler.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeRCInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystem.cmake.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInformation.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeSystemSpecificInitialize.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCXXCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestCompilerCommon.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CMakeTestRCCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ADSP-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\ARMCC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\AppleClang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Borland-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Bruce-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Clang-DetermineCompilerInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Comeau-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Compaq-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Cray-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Embarcadero-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Fujitsu-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GHS-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\GNU-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\HP-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IAR-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-C-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\IBMCPP-CXX-DetermineVersionInternal.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Intel-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MIPSpro-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX-FeatureTests.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\MSVC-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\NVIDIA-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\OpenWatcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PGI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\PathScale-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SCO-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SDCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\SunPro-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TI-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\TinyCC-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\VisualAge-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\Watcom-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\XL-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-C-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Compiler\zOS-CXX-DetermineCompiler.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\CompilerId\VS-10.vcxproj.in;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindOpenGL.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageHandleStandardArgs.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\FindPackageMessage.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Internal\FeatureTesting.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-Determine-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-C.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows-MSVC.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\Windows.cmake;C:\Python36\Lib\site-packages\cmake\data\share\cmake-3.14\Modules\Platform\WindowsPaths.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeCXXCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeRCCompiler.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\3.14.4\CMakeSystem.cmake;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.c;C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\feature_tests.cxx;C:\Users\Administrator\Documents\6.837\assn3\starter3\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\3rd_party\glew\src\glew.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\main.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\starter3_util.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\camera.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\vertexrecorder.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\clothsystem.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\timestepper.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\particlesystem.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\pendulumsystem.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\simplesystem.cpp" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\gl.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\starter3_util.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\camera.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\vertexrecorder.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\clothsystem.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\timestepper.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\particlesystem.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\pendulumsystem.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\src\simplesystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\build\ZERO_CHECK.vcxproj">
+      <Project>{0A3A5699-1D6F-3C37-A7A5-0D89406CCC07}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\build\3rd_party\glfw\src\glfw.vcxproj">
+      <Project>{29511572-E4E3-3389-895D-163ABC0AF816}</Project>
+      <Name>glfw</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\vecmath.vcxproj">
+      <Project>{D420C222-452B-3FBE-8CCD-9AA07948BDE4}</Project>
+      <Name>vecmath</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
