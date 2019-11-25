@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Administrator/Documents/6.837/assn3/starter3/3rd_party/glfw/src
+# Install script for directory: C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/3rd_party/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -6,7 +6,7 @@
  // your system should at least contain 8x8 particles.
 const int W = 8;
 const int H = 8;
-const float g = 9.8;
+const float g = 5.0;
 const float mass = 1.0;
 const float drag = 3.0;
 const float kStruct = 350.0;
@@ -197,7 +197,7 @@ void ClothSystem::draw(GLProgram& gl)
 				rec.record(m_vVecState[t + 2], CLOTH_COLOR);
 			}
 			glLineWidth(3.0f);
-			rec.draw(GL_LINES);
+			//rec.draw(GL_LINES);
 
 			gl.enableLighting(); // reset to default lighting model
 			t += 2;
@@ -218,7 +218,7 @@ void ClothSystem::draw(GLProgram& gl)
     //          after a mode change.
     gl.disableLighting();
     gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
-    VertexRecorder rec;
+    /*VertexRecorder rec;
     rec.record(O, CLOTH_COLOR);
     rec.record(O + Vector3f(w, 0, 0), CLOTH_COLOR);
     rec.record(O, CLOTH_COLOR);
@@ -230,7 +230,7 @@ void ClothSystem::draw(GLProgram& gl)
     rec.record(O + Vector3f(0, -w, 0), CLOTH_COLOR);
     rec.record(O + Vector3f(w, -w, 0), CLOTH_COLOR);
     glLineWidth(3.0f);
-    rec.draw(GL_LINES);
+    rec.draw(GL_LINES);*/
 
     gl.enableLighting(); // reset to default lighting model
     // EXAMPLE END

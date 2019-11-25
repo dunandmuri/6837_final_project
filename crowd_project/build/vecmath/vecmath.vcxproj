@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{D420C222-452B-3FBE-8CCD-9AA07948BDE4}</ProjectGuid>
+    <ProjectGuid>{D8C91088-0F03-3B88-9E3F-675070DB24F6}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>Win32</Platform>
@@ -56,26 +56,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vecmath.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">vecmath</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vecmath.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">vecmath</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vecmath.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">vecmath</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vecmath.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">vecmath</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Debug/</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <CompileAs>CompileAsCpp</CompileAs>
@@ -94,10 +94,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;GLEW_STATIC;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -110,7 +110,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>Release/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -129,10 +129,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -145,7 +145,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -164,10 +164,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,7 +180,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
       <CompileAs>CompileAsCpp</CompileAs>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -198,10 +198,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;GLEW_STATIC;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -213,10 +213,10 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt</Message>
+    <CustomBuild Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
-C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/vecmath/CMakeFiles/generate.stamp
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project -BC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build --check-stamp-file C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build/vecmath/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -224,12 +224,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
-C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/vecmath/CMakeFiles/generate.stamp
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project -BC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build --check-stamp-file C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build/vecmath/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -237,12 +237,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
-C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/vecmath/CMakeFiles/generate.stamp
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project -BC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build --check-stamp-file C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build/vecmath/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -250,12 +250,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
-C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/assn3/starter3 -BC:/Users/Administrator/Documents/6.837/assn3/starter3/build --check-stamp-file C:/Users/Administrator/Documents/6.837/assn3/starter3/build/vecmath/CMakeFiles/generate.stamp
+C:\Python36\Lib\site-packages\cmake\data\bin\cmake.exe -SC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project -BC:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build --check-stamp-file C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build/vecmath/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,31 +263,31 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\Matrix2f.cpp" />
-    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\Matrix3f.cpp" />
-    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\Matrix4f.cpp" />
-    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\Quat4f.cpp" />
-    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\Vector2f.cpp" />
-    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\Vector3f.cpp" />
-    <ClCompile Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\Vector4f.cpp" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\Matrix2f.h" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\Matrix3f.h" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\Matrix4f.h" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\Quat4f.h" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\Vector2f.h" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\Vector3f.h" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\Vector4f.h" />
-    <ClInclude Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\vecmath\include\vecmath.h" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\Matrix2f.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\Matrix3f.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\Matrix4f.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\Quat4f.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\Vector2f.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\Vector3f.cpp" />
+    <ClCompile Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\Vector4f.cpp" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\Matrix2f.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\Matrix3f.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\Matrix4f.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\Quat4f.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\Vector2f.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\Vector3f.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\Vector4f.h" />
+    <ClInclude Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\vecmath\include\vecmath.h" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Administrator\Documents\6.837\assn3\starter3\build\ZERO_CHECK.vcxproj">
-      <Project>{0A3A5699-1D6F-3C37-A7A5-0D89406CCC07}</Project>
+    <ProjectReference Include="C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\ZERO_CHECK.vcxproj">
+      <Project>{D3EA6C82-06AF-3A32-BA1E-6901495FBBB1}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

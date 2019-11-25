@@ -184,17 +184,17 @@ void initSystem()
     default: printf("Unrecognized integrator\n"); exit(-1);
     }
 
-    simpleSystem = new SimpleSystem();
+    //simpleSystem = new SimpleSystem();
     // TODO you can modify the number of particles
-    pendulumSystem = new PendulumSystem();
+    //pendulumSystem = new PendulumSystem();
     // TODO customize initialization of cloth system
     clothSystem = new ClothSystem();
 }
 
 void freeSystem() {
-    delete simpleSystem; simpleSystem = nullptr;
+    //delete simpleSystem; simpleSystem = nullptr;
     delete timeStepper; timeStepper = nullptr;
-    delete pendulumSystem; pendulumSystem = nullptr;
+    //delete pendulumSystem; pendulumSystem = nullptr;
     delete clothSystem; clothSystem = nullptr;
 }
 
@@ -210,8 +210,8 @@ void stepSystem()
 {
     // step until simulated_s has caught up with elapsed_s.
     while (simulated_s < elapsed_s) {
-        timeStepper->takeStep(simpleSystem, h);
-        timeStepper->takeStep(pendulumSystem, h);
+        //timeStepper->takeStep(simpleSystem, h);
+        //timeStepper->takeStep(pendulumSystem, h);
         timeStepper->takeStep(clothSystem, h);
         simulated_s += h;
     }
@@ -225,8 +225,8 @@ void drawSystem()
     GLProgram gl(program_light, program_color, &camera);
     gl.updateLight(LIGHT_POS, LIGHT_COLOR.xyz()); // once per frame
 
-    simpleSystem->draw(gl);
-    pendulumSystem->draw(gl);
+    //simpleSystem->draw(gl);
+    //pendulumSystem->draw(gl);
     clothSystem->draw(gl);
 
     // set uniforms for floor

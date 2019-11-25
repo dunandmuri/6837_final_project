@@ -1,5 +1,5 @@
-﻿  Building Custom Rule C:/Users/Administrator/Documents/6.837/assn3/starter3/vecmath/CMakeLists.txt
-  CMake does not need to re-run because C:/Users/Administrator/Documents/6.837/assn3/starter3/build/vecmath/CMakeFiles/generate.stamp is up-to-date.
+﻿  Building Custom Rule C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/vecmath/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/Administrator/Documents/6.837/6837_final_project/crowd_project/build/vecmath/CMakeFiles/generate.stamp is up-to-date.
   Matrix2f.cpp
   Matrix3f.cpp
   Matrix4f.cpp
@@ -8,4 +8,4 @@
   Vector3f.cpp
   Vector4f.cpp
   Generating Code...
-  vecmath.vcxproj -> C:\Users\Administrator\Documents\6.837\assn3\starter3\build\vecmath\Debug\vecmath.lib
+  vecmath.vcxproj -> C:\Users\Administrator\Documents\6.837\6837_final_project\crowd_project\build\vecmath\Debug\vecmath.lib
