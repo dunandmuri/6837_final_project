@@ -18,6 +18,7 @@ const float restShear = sqrt(diff*diff*2);
 const float restFlex = diff * 2;
 
 const float restPersonal = 0.6;
+const int xVariation = 2;
 
 ClothSystem::ClothSystem()
 {
@@ -29,40 +30,38 @@ ClothSystem::ClothSystem()
 	for (int i = 0; i < H; i++) {
 		for (int j = 0; j < W; j++) {
 			m_vVecState.push_back(initialPosition + j * Xincrement + i * Ydecrement ); //position decreases every timestep
-			m_vVecState.push_back(Vector3f{ 0.0, 1.0, 0.0 }); // velocity = 0
+			m_vVecState.push_back(Vector3f{ 0.0, 0.5, 0.0 }); // velocity = 0
 		}
 	}
 }
 
 
 
-Vector3f getSpringForceStruct(Vector3f start, Vector3f end) {
-	Vector3f d = start- end;
-	Vector3f force = -1 * kStruct*(d.abs() - restStruct)*d / d.abs();
-	return force;
-}
+// Vector3f getSpringForceStruct(Vector3f start, Vector3f end) {
+// 	Vector3f d = start- end;
+// 	Vector3f force = -1 * kStruct*(d.abs() - restStruct)*d / d.abs();
+// 	return force;
+// }
 
-Vector3f getSpringForceShear(Vector3f start, Vector3f end) {
-	Vector3f d = start - end;
-	Vector3f force = -1 * kShear*(d.abs() - restShear)*d / d.abs();
-	return force;
-}
+// Vector3f getSpringForceShear(Vector3f start, Vector3f end) {
+// 	Vector3f d = start - end;
+// 	Vector3f force = -1 * kShear*(d.abs() - restShear)*d / d.abs();
+// 	return force;
+// }
 
-Vector3f getSpringForceFlex(Vector3f start, Vector3f end) {
-	Vector3f d = start - end;
-	Vector3f force = -1 * kFlex*(d.abs() - restFlex)*d / d.abs();
-	return force;
-}
+// Vector3f getSpringForceFlex(Vector3f start, Vector3f end) {
+// 	Vector3f d = start - end;
+// 	Vector3f force = -1 * kFlex*(d.abs() - restFlex)*d / d.abs();
+// 	return force;
+// }
 
 Vector3f getPersonalSpaceForce(Vector3f boid, Vector3f other) { //find force acting on boid from other
 	Vector3f d = boid - other;
 	Vector3f force = { 0,0,0 };
 	if (d.abs() < restPersonal) {
 		force = -1 * (d.abs()-restPersonal)*d/ d.abs();
-
 	}
 	return force;
-
 }
 
 std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
@@ -91,6 +90,28 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 					tt += 2;
 				}
 			}
+
+			// Random float between - xVariaion/2 and + xVariation/2
+			float x_dir = xVariation/2. - (rand() % (xVariation * 100))/100.; 
+			
+			// Boid randomly speed up and slow down by 0.25 in the y direction
+			float y_dir = 2.5 - (rand() % 50)/10.;
+
+			// We are staying in one plane
+			float z_dir = 0;
+
+			f.push_back(state[t + 1]); //velocity
+
+
+			f.push_back(Vector3f(x_dir, y_dir, z_dir) + totalF / mass); //acceleration
+
+			t += 2;
+			
+		}
+	}     
+    return f;
+}
+
 			//if (t != 0 && t != W*2 - 2) {
 				//totalF += { 0, -g, 0 }; //gravity
 				//totalF += -1 * drag*state[t + 1]; //drag
@@ -150,21 +171,6 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 				// FLEX SPRINGS END
 
 			//}
-
-			f.push_back(state[t + 1]); //velocity
-			f.push_back(totalF / mass); //acceleration
-
-			t += 2;
-			
-		}
-	}
-
-
-
-
-     
-    return f;
-}
 
 
 void ClothSystem::draw(GLProgram& gl)
