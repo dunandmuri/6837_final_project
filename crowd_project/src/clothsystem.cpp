@@ -23,6 +23,7 @@ const float restPersonal = 0.6;
 
 // low chaos = 2
 // high chaos = 10
+const float restCelebrity = 0.4;
 const int xVariation = 2;
 
 ClothSystem::ClothSystem()
@@ -49,6 +50,15 @@ Vector3f getPersonalSpaceForce(Vector3f boid, Vector3f other) { //find force act
 	return force;
 }
 
+Vector3f getCelebrityForce(Vector3f boid, Vector3f other) {
+	Vector3f d = boid - other;
+	Vector3f force = .01 *(d.abs() - restCelebrity)*d / d.abs();
+	if (d.abs() > 1.0) {
+		force = { 0,0,0 };
+	}
+	return force;
+}
+
 std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 {
     //std::vector<Vector3f> f(state.size());
@@ -69,7 +79,10 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 			float tt = 0;
 			for (int ii = 0; ii < H; ii++) {
 				for (int jj = 0; jj < W * 2; jj += 2) {
-					if (t != tt) {
+					if (t != tt && tt == 4) {
+						totalF += getCelebrityForce(state[t], state[tt]);
+					}
+					else if (t != tt) {
 						totalF += getPersonalSpaceForce(state[t], state[tt]);
 					}
 					tt += 2;
