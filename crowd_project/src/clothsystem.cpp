@@ -17,7 +17,12 @@ const float restStruct = diff;
 const float restShear = sqrt(diff*diff*2);
 const float restFlex = diff * 2;
 
+// small personal space = 0.4
+// large personal space = 0.6
 const float restPersonal = 0.6;
+
+// low chaos = 2
+// high chaos = 10
 const int xVariation = 2;
 
 ClothSystem::ClothSystem()
@@ -34,26 +39,6 @@ ClothSystem::ClothSystem()
 		}
 	}
 }
-
-
-
-// Vector3f getSpringForceStruct(Vector3f start, Vector3f end) {
-// 	Vector3f d = start- end;
-// 	Vector3f force = -1 * kStruct*(d.abs() - restStruct)*d / d.abs();
-// 	return force;
-// }
-
-// Vector3f getSpringForceShear(Vector3f start, Vector3f end) {
-// 	Vector3f d = start - end;
-// 	Vector3f force = -1 * kShear*(d.abs() - restShear)*d / d.abs();
-// 	return force;
-// }
-
-// Vector3f getSpringForceFlex(Vector3f start, Vector3f end) {
-// 	Vector3f d = start - end;
-// 	Vector3f force = -1 * kFlex*(d.abs() - restFlex)*d / d.abs();
-// 	return force;
-// }
 
 Vector3f getPersonalSpaceForce(Vector3f boid, Vector3f other) { //find force acting on boid from other
 	Vector3f d = boid - other;
@@ -102,7 +87,6 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 
 			f.push_back(state[t + 1]); //velocity
 
-
 			f.push_back(Vector3f(x_dir, y_dir, z_dir) + totalF / mass); //acceleration
 
 			t += 2;
@@ -111,67 +95,6 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 	}     
     return f;
 }
-
-			//if (t != 0 && t != W*2 - 2) {
-				//totalF += { 0, -g, 0 }; //gravity
-				//totalF += -1 * drag*state[t + 1]; //drag
-
-				///STRUCTURAL FORCES////
-				/*if (i != 0) { //if not at top edge
-					totalF += getSpringForceStruct(state[t], state[t-2*W]); //get spring 1 above
-				}
-				if (i != H - 1) { //if not at bottom edge
-					totalF += getSpringForceStruct(state[t], state[t+2*W]); // get spring 1 below
-				}
-
-				if (j != 0) { //if not at left edge
-					totalF += getSpringForceStruct(state[t], state[t-2]); //get spring 1 to the left
-
-				}
-
-				if (j != W * 2 - 2) { //if not at right edge
-					totalF += getSpringForceStruct(state[t], state[t+2]); // get spring 1 to the right
-				}
-				/// STRUCTURAL SPRINGS END /////
-
-				//// SHEAR SPRINGS ////// y=i x=j
-				if (i >= 1 && j / 2 >= 1) {
-					totalF += getSpringForceShear(state[t], state[t - 2 * (W + 1)]); // get upper left
-				}
-
-				if (i <= H - 2 && j / 2 >= 1) {
-					totalF += getSpringForceShear(state[t], state[t + 2 * (W - 1)]); // get lower left
-				}
-
-				if (i >= 1 && j / 2 <= W - 2) {
-					totalF += getSpringForceShear(state[t], state[t - 2 * (W - 1)]); // get upper right
-				}
-				
-				if (i <= H - 2 && j / 2 <= W - 2) {
-					totalF += getSpringForceShear(state[t], state[t + 2 * (W + 1)]); // get lower right
-				}
-				/// SHEAR SPRINGS END
-
-				/// FLEX SPRINGS ////// y=i x=j
-				if (i >= 2) {
-					totalF += getSpringForceFlex(state[t], state[t - 2 * 2 * W]); //get 2 up spring
-				}
-				if (j / 2 >= 2) {
-					totalF += getSpringForceFlex(state[t], state[t - 2]); // get 2 left spring
-				}
-
-				if (i <= H - 3) {
-					totalF += getSpringForceFlex(state[t], state[t + 2 * 2 * W]); // get 2 down spring
-				}
-
-				if (j / 2 <= W - 3) {
-					totalF += getSpringForceFlex(state[t], state[t + 2]); // get 2 right spring
-				}
-				*/
-				// FLEX SPRINGS END
-
-			//}
-
 
 void ClothSystem::draw(GLProgram& gl)
 {
