@@ -33,7 +33,8 @@ const int xVariation = 1;
 struct factors {
 	bool monster;
 	bool celebrity;
-	int focus;
+	int focusMonster;
+	int focusCelebrity;
 	float restMonster;
 	float restCelebrity;
 } init;
@@ -44,8 +45,9 @@ ClothSystem::ClothSystem()
 {
 
 	init.monster = true;
-	init.celebrity = false;
-	init.focus = 64*2-8; // celeb: 72, monster: 15
+	init.celebrity = true;
+	init.focusMonster = 64*2-8; // celeb: 72, monster: 15
+	init.focusCelebrity = 58;
 	init.restMonster = 0.8;
 	init.restCelebrity = 0.4;
 
@@ -86,7 +88,7 @@ Vector3f getMonsterForce(Vector3f boid, Vector3f other) {
 	Vector3f d = boid - other;
 	Vector3f force = {0, 0, 0};
 	if (d.abs() < restMonster) {
-		force = 0.5 * d/d.abs(); // * (d.abs() - restMonster)*d / d.abs();
+		force = 0.8 * d/d.abs(); // * (d.abs() - restMonster)*d / d.abs();
 	}
 	return force;
 }
@@ -112,16 +114,18 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 			for (int ii = 0; ii < H; ii++) {
 				for (int jj = 0; jj < W * 2; jj += 2) {
 
-					if (t != tt && tt == init.focus) {
+					if (t != tt && (tt == init.focusMonster || tt == init.focusCelebrity)) {
 						// totalF += getPersonalSpaceForce(state[t], state[tt]);
 
 						// Celebrity
-						if(init.celebrity) {
-							totalF += getCelebrityForce(state[t], state[tt]);
+						if(init.celebrity && tt == init.focusCelebrity ) {
+							if ((init.monster && t != init.focusMonster) || !init.monster) {  ///GET RID OF this if statement if you want the monster  to chase
+								totalF += getCelebrityForce(state[t], state[tt]);
+							}
 						}
 
 						// Monster
-						else if(init.monster) {
+						if(init.monster && tt == init.focusMonster) {
 							float x_chaos_monster = (xVariation + 2)/2. - (rand() % ((xVariation + 2) * 100))/100.; 
 							float y_chaos_monster = 2.5 - (rand() % 50)/10.;
 
@@ -164,6 +168,7 @@ void ClothSystem::draw(GLProgram& gl)
 
     const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
 	const Vector3f OUTLIER_COLOR(0.73f, 0.0f, 0.83f);
+	const Vector3f OUTLIER_COLOR2(1.0f, 1.0f, 0.0f);
     gl.updateMaterial(CLOTH_COLOR);
 
     // EXAMPLE for how to render cloth particles.
@@ -184,11 +189,17 @@ void ClothSystem::draw(GLProgram& gl)
 		for (int j = 0; j < W * 2; j += 2) {
 			Vector3f pos(m_vVecState[t]); //YOUR PARTICLE POSITION
 			gl.updateModelMatrix(Matrix4f::translation(pos));
-			if (t == init.focus) {
+			if (t == init.focusMonster) {
 			 	gl.updateMaterial(OUTLIER_COLOR);
 				drawSphere(0.075f, 10, 10);
 				gl.updateMaterial(CLOTH_COLOR);
-			} else {
+			} 
+			else if (t == init.focusCelebrity) {
+				gl.updateMaterial(OUTLIER_COLOR2);
+				drawSphere(0.075f, 10, 10);
+				gl.updateMaterial(CLOTH_COLOR);
+			}
+			else {
 				drawSphere(0.075f, 10, 10);
 			}
 			gl.disableLighting();
