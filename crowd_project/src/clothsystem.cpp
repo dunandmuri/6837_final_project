@@ -21,22 +21,43 @@ const float restFlex = diff * 2;
 // large personal space = 0.6
 const float restPersonal = 0.6;
 
+
 // low chaos = 2
 // high chaos = 10
 const float restCelebrity = 0.4;
-const int xVariation = 2;
+const float restMonster = 0.8;
+const int xVariation = 1;
+
+// const int FOCUS = 72;
+
+struct factors {
+	bool monster;
+	bool celebrity;
+	int focus;
+	float restMonster;
+	float restCelebrity;
+} init;
+
+
 
 ClothSystem::ClothSystem()
 {
+
+	init.monster = true;
+	init.celebrity = false;
+	init.focus = 64*2-8; // celeb: 72, monster: 15
+	init.restMonster = 0.8;
+	init.restCelebrity = 0.4;
+
     // TODO 5. Initialize m_vVecState with cloth particles. 
     // You can again use rand_uniform(lo, hi) to make things a bit more interesting
-	Vector3f initialPosition = { 0, 0, 0 };
+	Vector3f initialPosition = { -2, 0, 0 };
 	Vector3f Ydecrement = { 0, -1*diff, 0 };
 	Vector3f Xincrement = { diff, 0, 0 };
 	for (int i = 0; i < H; i++) {
 		for (int j = 0; j < W; j++) {
 			m_vVecState.push_back(initialPosition + j * Xincrement + i * Ydecrement ); //position decreases every timestep
-			m_vVecState.push_back(Vector3f{ 0.0, 0.5, 0.0 }); // velocity = 0
+			m_vVecState.push_back(Vector3f{ 0.0, 0.5, 0.0 });
 		}
 	}
 }
@@ -52,9 +73,20 @@ Vector3f getPersonalSpaceForce(Vector3f boid, Vector3f other) { //find force act
 
 Vector3f getCelebrityForce(Vector3f boid, Vector3f other) {
 	Vector3f d = boid - other;
-	Vector3f force = .01 *(d.abs() - restCelebrity)*d / d.abs();
-	if (d.abs() > 1.0) {
-		force = { 0,0,0 };
+	// Vector3f force = .01 *(d.abs() - restCelebrity)*d / d.abs();
+	Vector3f force = -.3 *d / d.abs();
+
+	// if (d.abs() > 1.0) {
+	// 	force = { 0,0,0 };
+	// }
+	return force;
+}
+
+Vector3f getMonsterForce(Vector3f boid, Vector3f other) {
+	Vector3f d = boid - other;
+	Vector3f force = {0, 0, 0};
+	if (d.abs() < restMonster) {
+		force = 0.5 * d/d.abs(); // * (d.abs() - restMonster)*d / d.abs();
 	}
 	return force;
 }
@@ -79,8 +111,23 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 			float tt = 0;
 			for (int ii = 0; ii < H; ii++) {
 				for (int jj = 0; jj < W * 2; jj += 2) {
-					if (t != tt && tt == 4) {
-						totalF += getCelebrityForce(state[t], state[tt]);
+
+					if (t != tt && tt == init.focus) {
+						// totalF += getPersonalSpaceForce(state[t], state[tt]);
+
+						// Celebrity
+						if(init.celebrity) {
+							totalF += getCelebrityForce(state[t], state[tt]);
+						}
+
+						// Monster
+						else if(init.monster) {
+							float x_chaos_monster = (xVariation + 2)/2. - (rand() % ((xVariation + 2) * 100))/100.; 
+							float y_chaos_monster = 2.5 - (rand() % 50)/10.;
+
+							totalF += getMonsterForce(state[t], state[tt]) + Vector3f(x_chaos_monster, y_chaos_monster, 0);
+						}
+						
 					}
 					else if (t != tt) {
 						totalF += getPersonalSpaceForce(state[t], state[tt]);
@@ -88,7 +135,6 @@ std::vector<Vector3f> ClothSystem::evalF(std::vector<Vector3f> state)
 					tt += 2;
 				}
 			}
-
 			// Random float between - xVariaion/2 and + xVariation/2
 			float x_dir = xVariation/2. - (rand() % (xVariation * 100))/100.; 
 			
@@ -117,6 +163,7 @@ void ClothSystem::draw(GLProgram& gl)
     //         - or draw wireframe mesh
 
     const Vector3f CLOTH_COLOR(0.9f, 0.9f, 0.9f);
+	const Vector3f OUTLIER_COLOR(0.73f, 0.0f, 0.83f);
     gl.updateMaterial(CLOTH_COLOR);
 
     // EXAMPLE for how to render cloth particles.
@@ -137,7 +184,13 @@ void ClothSystem::draw(GLProgram& gl)
 		for (int j = 0; j < W * 2; j += 2) {
 			Vector3f pos(m_vVecState[t]); //YOUR PARTICLE POSITION
 			gl.updateModelMatrix(Matrix4f::translation(pos));
-			drawSphere(0.075f, 10, 10);
+			if (t == init.focus) {
+			 	gl.updateMaterial(OUTLIER_COLOR);
+				drawSphere(0.075f, 10, 10);
+				gl.updateMaterial(CLOTH_COLOR);
+			} else {
+				drawSphere(0.075f, 10, 10);
+			}
 			gl.disableLighting();
 			gl.updateModelMatrix(Matrix4f::identity()); // update uniforms after mode change
 			VertexRecorder rec;
